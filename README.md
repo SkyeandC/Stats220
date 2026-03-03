@@ -11,7 +11,7 @@ For example, I am interested in how statistical analysis can be applied to socia
 Access to mental health support or prior legal outcomes may be associated with violent crimes.
 By combining statistics with insights from psychology, criminology, and social sciences, it may be possible to make informed conclusions that help design interventions. For example, improving housing support or economic opportunities could reduce certain types of crime, while fair legal outcomes could reduce revenge-based offenses.
 
-# Limitations
+Limitations
 There are important limitations to this type of analysis:
 
 Human behavior is complex and unpredictable; statistical models cannot fully predict individual actions.
