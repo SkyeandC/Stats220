@@ -7,8 +7,7 @@ A little about me:
 - I am taking STATS 220 because it would be an extremly helpful course in scraping data and cleaning it
 - I am interested in learning about the use of multiple tools to scrape and clean online data so that it could be used to make informed descisions.
   
-For example, I am interested in how statistical analysis can be applied to social issues, such as crime patterns. By analysing historical data, we can explore trends and examine factors that may be associated with different types of offences. For instance:
-Socioeconomic factors, like housing or income, may be related to robbery rates.
+For example, I am interested in how statistical analysis can be applied to social issues, such as crime patterns. By analysing historical data, we can explore trends and examine factors that may be associated with different types of offences. For instance, socioeconomic factors, like housing or income, may be related to robbery rates.
 Access to mental health support or prior legal outcomes may be associated with violent crimes.
 By combining statistics with insights from psychology, criminology, and social sciences, it may be possible to make informed conclusions that help design interventions. For example, improving housing support or economic opportunities could reduce certain types of crime, while fair legal outcomes could reduce revenge-based offenses.
 
