@@ -29,7 +29,8 @@ The goal is to use data responsibly to provide *evidence-based insights that sup
 A meme that captures how I currently feel about my university studies is ![](https://media1.tenor.com/m/GjqLIt28NkQAAAAd/vietnam-flashback.gif)
 
 # Yotube Links
-[I like building and decorating stuff](https://www.youtube.com/@thymenbuilds)
-[Youtube random song playlist chanle which I use](https://www.youtube.com/@amazingmelody)
+1. [I like building and decorating stuff](https://www.youtube.com/@thymenbuilds)
+
+2. [Youtube random song playlist chanle which I use](https://www.youtube.com/@amazingmelody)
 
 ![Goodbye!](https://media1.tenor.com/m/zqzxOu6FZk0AAAAC/hey-cat.gif)
