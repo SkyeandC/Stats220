@@ -26,10 +26,10 @@ There are important limitations to this type of analysis:
 The goal is to use data responsibly to provide *evidence-based insights that support safer communities and informed policy decisions*.
 
 ## Memes And Links
-A meme that captures how I currently feel about my university studies is ![](https://tenor.com/view/cat-vietnam-war-horror-meme-gif-13338458502547662798)
+A meme that captures how I currently feel about my university studies is ![](https://media1.tenor.com/m/GjqLIt28NkQAAAAd/vietnam-flashback.gif)
 
 # Yotube Links
 [I like building and decorating stuff](https://www.youtube.com/@thymenbuilds)
 [Youtube random song playlist chanle which I use](https://www.youtube.com/@amazingmelody)
 
-![Goodbye!](https://tenor.com/view/hey-cat-waving-wave-paw-gif-18029335)
+![Goodbye!](https://media1.tenor.com/m/zqzxOu6FZk0AAAAC/hey-cat.gif)
