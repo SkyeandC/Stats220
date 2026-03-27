@@ -6,8 +6,6 @@ output: html_fragment
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 
-library(tidyverse)
-
 ```
 
 ```{css}
@@ -24,6 +22,8 @@ background-color: #ffd1df;
 **This data was collected mainly by me**, however my brother and friends helped me collect data by going on the bus and filling out the survey.
 
 ```{r}
+library(tidyverse)
+
 # Reading the CSV from sheet:
 logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSw-XoLZ8ve05qy1vgVbH2RZwFZ2eusrR9iB7ZgzSlF9P9p09UnIcNwO3FNEpoc1BxuZf8UpVhC8eTO/pub?gid=973542635&single=true&output=csv")
 
