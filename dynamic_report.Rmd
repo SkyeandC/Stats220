@@ -1,0 +1,108 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{css}
+body {
+background-color: #ffd1df;
+}
+
+```
+
+## Bus travel report that shows mean travel time by number of stops, and average travel time by reasson?
+
+**I am analyzing** to see if the average travel time is affected by the number of stops it makes, and if different reasons affects the travel time.
+
+**This data was collected mainly by me**, however my brother and friends helped me collect data by going on the bus and filling out the survey.
+
+```{r}
+library(tidyverse)
+
+# Reading the CSV from sheet:
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSw-XoLZ8ve05qy1vgVbH2RZwFZ2eusrR9iB7ZgzSlF9P9p09UnIcNwO3FNEpoc1BxuZf8UpVhC8eTO/pub?gid=973542635&single=true&output=csv")
+
+
+# Rename columns
+latest_data <- logged_data %>%
+  rename(
+    time_taken = 2,
+    travel_minutes = 3,
+    main_factor = 4,
+    stops_made = 5
+  )
+
+# Summary statistics
+travel_summary <- latest_data %>%
+  summarise(
+    mean_travel = mean(travel_minutes, na.rm = TRUE),
+    max_travel = max(travel_minutes, na.rm = TRUE)
+  )
+
+stops_summary <- latest_data %>%
+  summarise(
+    mean_stops = mean(stops_made, na.rm = TRUE),
+    max_stops = max(stops_made, na.rm = TRUE)
+  )
+```
+
+**This will update** as `r nrow(latest_data)` people record their bus journey time from Stop C to Stockholm Road. If more people do the Google Form, this number will increase for each respondent. 
+
+
+
+```{r}
+# Creating a new data set for average travel by reason:
+avg_travel <- latest_data %>%
+  group_by(main_factor) %>%
+  summarise(mean_travel = mean(travel_minutes, na.rm = TRUE))
+
+# Creating a new data set for average travel time by number of stops:
+avg_travel_stops <- latest_data %>%
+  group_by(stops_made) %>%
+  summarise(mean_travel = mean(travel_minutes, na.rm = TRUE))
+
+# Plot 1 with average travel time by reason
+ggplot(avg_travel, aes(x = main_factor, y = mean_travel, fill = mean_travel)) +
+  geom_col() +          
+  theme_minimal() +
+  labs(
+    title = "Average Bus Travel Time by Reason",
+    subtitle = "STATS 220, 2026",
+    x = "Reason",
+    y = "Mean Travel Time (minutes)",
+    fill = "Minutes"
+  ) +
+  coord_flip() 
+
+# Plot 2 with stops made with average travel time 
+ggplot(avg_travel_stops, aes(x = factor(stops_made), y = mean_travel, fill = mean_travel)) +
+  geom_col() +
+  theme_minimal() +
+  labs(
+    title = "Average Bus Travel Time by Number of Stops",
+    subtitle = "STATS 220, 2026",
+    x = "Number of Stops",
+    y = "Mean Travel Time (minutes)",
+    fill = "Minutes"
+  )
+```
+
+From the collected data, we can see that the average bus travel time was `r round(travel_summary$mean_travel, 1)` minutes, with the longest trip taking `r travel_summary$max_travel` minutes.
+
+On average, buses made `r round(stops_summary$mean_stops, 1)` stops per trip, with a maximum of `r stops_summary$max_stops` stops.
+
+**This suggest** that the more bus stops there are, the longer the bus takes from stop c, to Stockholm road.
+
+**The plot for** travel reasons also hint that delays massively impacts the travel time compared to the other reasons. Traffic is then the 2 highest reason that increases travel time which is slightly higher compared to passengers boarding and leaving.
+
+**In conclusion** the most significant reason that affects travel time is delays, followed up with traffic and then passengers.
+
+
+## Fun meme
+
+![](https://media.tenor.com/iYA_TGqqq60AAAAM/yoo-cat.gif)
