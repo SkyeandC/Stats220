@@ -50,9 +50,9 @@ stops_summary <- latest_data %>%
     max_stops = max(stops_made, na.rm = TRUE)
   )
 ```
-::: dynamic-comment
+
 **This will update** as `r nrow(latest_data)` people record their bus journey time from Stop C to Stockholm Road. If more people do the Google Form, this number will increase for each respondent. 
-:::
+
 
 
 ```{r}
@@ -92,8 +92,6 @@ ggplot(avg_travel_stops, aes(x = factor(stops_made), y = mean_travel, fill = mea
   )
 ```
 
-::: dynamic-comment
-
 From the collected data, we can see that the average bus travel time was `r round(travel_summary$mean_travel, 1)` minutes, with the longest trip taking `r travel_summary$max_travel` minutes.
 
 On average, buses made `r round(stops_summary$mean_stops, 1)` stops per trip, with a maximum of `r stops_summary$max_stops` stops.
@@ -103,7 +101,7 @@ On average, buses made `r round(stops_summary$mean_stops, 1)` stops per trip, wi
 **The plot for** travel reasons also hint that delays massively impacts the travel time compared to the other reasons. Traffic is then the 2 highest reason that increases travel time which is slightly higher compared to passengers boarding and leaving.
 
 **In conclusion** the most significant reason that affects travel time is delays, followed up with traffic and then passengers.
-:::
+
 
 ## Fun meme
 
